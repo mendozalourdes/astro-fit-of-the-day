@@ -21,7 +21,8 @@ const SingleAstroCard = ({id, key, date, button, explanation, hdurl, title, url}
     return (
         <NavLink to={`/astro-info/${id}`}>
         <div className="each-astro-data" id={id}>
-            <p>{url}</p>
+            {/* <p>{url}</p> */}
+            <a href={url}>Share This Image</a>
             <p className="astro-title"> {title}</p>
             <button id={id} 
             disabled={isDisabled}
