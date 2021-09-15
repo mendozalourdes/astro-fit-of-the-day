@@ -3,8 +3,10 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import {Route, Switch } from 'react-router-dom';
 import { fetchNASAData } from '../../Utils/apiCalls'
-import Header from '../Header/Header'
-import Home from '../Home/Home'
+import Header from '../Header/Header';
+import Home from '../Home/Home';
+import AllAstroCards  from '../AllAstroCards/AllAstroCards';
+import SingleAstroCard from '../SingleAstroCard/SingleAstroCard';
 
 function App() {
 
@@ -31,12 +33,30 @@ function App() {
   }, [])
   
   console.log("astroData", astroData)
+
+  if (!astroData) {
+    return (
+      <h1>I'm still loading!</h1>
+    )
+  }
+
+  if (astroData) {
+
   return (
-    <div className="Astro-fit-of-the-day">
+    <main className="Astro-fit-of-the-day">
       <Header/>
-      {/* <Home/> */}
-    </div>
+      <Switch>
+        <Route exact path ="/" render={() =>
+          <AllAstroCards astroData={astroData}/>
+        }/>
+        <Route exact path ="/astro-info" render={() =>
+          <SingleAstroCard/>
+        }/>
+        
+      </Switch>
+    </main>
   );
+  }
 }
 
 export default App;
