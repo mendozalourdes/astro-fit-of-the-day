@@ -5,9 +5,9 @@ import './Header.css';
 const Header = () => {
     return (
         <nav className="header">
-            {/* <Link to='/'>  */}
+            <Link to='/'> 
             Astro-Fit of the Day
-            {/* </Link> */}
+            </Link>
             
         </nav>
     );

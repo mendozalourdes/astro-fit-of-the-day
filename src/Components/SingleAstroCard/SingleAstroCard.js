@@ -14,13 +14,14 @@ const SingleAstroCard = ({id, key, date, button, explanation, hdurl, title, url}
     }
 
     let buttonImg = button ?
-                   <img id={id} src="https://img.icons8.com/office/30/000000/like--v1.png" alt="favorite button"/>
+                   <img id={id} key={key} src="https://img.icons8.com/office/30/000000/like--v1.png" alt="favorite button"/>
                  : <img id={id} src="https://img.icons8.com/office/30/000000/delete-sign.png" alt="delete button"/>;
 
 
     return (
-        <Link to='/astro-info'>
-        <article className="each-astro-data" id={id}>
+        <NavLink to={`/astro-info/${id}`}>
+        <div className="each-astro-data" id={id}>
+            <p>{url}</p>
             <p className="astro-title"> {title}</p>
             <button id={id} 
             disabled={isDisabled}
@@ -35,8 +36,8 @@ const SingleAstroCard = ({id, key, date, button, explanation, hdurl, title, url}
             
             <img src={url} alt={title} className="astro-image"/>
 
-        </article>
-        </Link>
+        </div>
+        </NavLink>
     );
 };
 

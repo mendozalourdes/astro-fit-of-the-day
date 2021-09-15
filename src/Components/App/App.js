@@ -7,6 +7,7 @@ import Header from '../Header/Header';
 import Home from '../Home/Home';
 import AllAstroCards  from '../AllAstroCards/AllAstroCards';
 import SingleAstroCard from '../SingleAstroCard/SingleAstroCard';
+import SingleAstroInfoCard from '../SingleAstroInfoCard/SingleAstroInfoCard';
 
 function App() {
 
@@ -49,8 +50,17 @@ function App() {
         <Route exact path ="/" render={() =>
           <AllAstroCards astroData={astroData}/>
         }/>
-        <Route exact path ="/astro-info" render={() =>
-          <SingleAstroCard/>
+        <Route exact path ="/astro-info/:id" render={({match}) => {
+          // console.log("match.params", match.params.id)
+          // console.log("astrooo", astroData[0])
+          let astroMatch = astroData[match.params.id]
+          // console.log("astromatch??", astroMatch)
+
+          return (
+            <SingleAstroInfoCard astroData={astroData} id={match.params.id} astroMatch={astroMatch}/>
+
+            )
+        }
         }/>
         
       </Switch>
