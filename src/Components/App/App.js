@@ -1,7 +1,10 @@
 import React from 'react';
 import './App.css';
 import { useEffect, useState } from 'react';
+import {Route, Switch } from 'react-router-dom';
 import { fetchNASAData } from '../../Utils/apiCalls'
+import Header from '../Header/Header'
+import Home from '../Home/Home'
 
 function App() {
 
@@ -30,12 +33,8 @@ function App() {
   console.log("astroData", astroData)
   return (
     <div className="Astro-fit-of-the-day">
-      <header className="App-header">
-      <h1>Astro Fit of the Day</h1>
-        <p>
-         Coming Soon!
-        </p>
-      </header>
+      <Header/>
+      {/* <Home/> */}
     </div>
   );
 }
