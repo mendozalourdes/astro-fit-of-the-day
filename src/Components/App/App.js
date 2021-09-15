@@ -8,6 +8,8 @@ import Home from '../Home/Home';
 import AllAstroCards  from '../AllAstroCards/AllAstroCards';
 import SingleAstroCard from '../SingleAstroCard/SingleAstroCard';
 import SingleAstroInfoCard from '../SingleAstroInfoCard/SingleAstroInfoCard';
+import loadingSpin from '../Images/loadingSpin.gif';
+
 
 function App() {
 
@@ -37,7 +39,13 @@ function App() {
 
   if (!astroData) {
     return (
-      <h1>I'm still loading!</h1>
+      <>
+      <Header />
+      <section className='loading-container'>
+        <p>Thanks for your patience while we get your images from space! It's a long trek.</p>
+         <img className='loading' src={loadingSpin} />
+      </section>
+      </>
     )
   }
 
