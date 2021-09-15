@@ -3,8 +3,11 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import {Route, Switch } from 'react-router-dom';
 import { fetchNASAData } from '../../Utils/apiCalls'
-import Header from '../Header/Header'
-import Home from '../Home/Home'
+import Header from '../Header/Header';
+import Home from '../Home/Home';
+import AllAstroCards  from '../AllAstroCards/AllAstroCards';
+import SingleAstroCard from '../SingleAstroCard/SingleAstroCard';
+import SingleAstroInfoCard from '../SingleAstroInfoCard/SingleAstroInfoCard';
 
 function App() {
 
@@ -31,12 +34,39 @@ function App() {
   }, [])
   
   console.log("astroData", astroData)
+
+  if (!astroData) {
+    return (
+      <h1>I'm still loading!</h1>
+    )
+  }
+
+  if (astroData) {
+
   return (
-    <div className="Astro-fit-of-the-day">
+    <main className="Astro-fit-of-the-day">
       <Header/>
-      {/* <Home/> */}
-    </div>
+      <Switch>
+        <Route exact path ="/" render={() =>
+          <AllAstroCards astroData={astroData}/>
+        }/>
+        <Route exact path ="/astro-info/:id" render={({match}) => {
+          // console.log("match.params", match.params.id)
+          // console.log("astrooo", astroData[0])
+          let astroMatch = astroData[match.params.id]
+          // console.log("astromatch??", astroMatch)
+
+          return (
+            <SingleAstroInfoCard astroData={astroData} id={match.params.id} astroMatch={astroMatch}/>
+
+            )
+        }
+        }/>
+        
+      </Switch>
+    </main>
   );
+  }
 }
 
 export default App;
