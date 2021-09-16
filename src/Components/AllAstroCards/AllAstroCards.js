@@ -1,7 +1,8 @@
 import React from 'react';
-import { Router, Link, NavLink } from 'react-router-dom';
+import { Route, Link, NavLink } from 'react-router-dom';
 import SingleAstroCard from '../SingleAstroCard/SingleAstroCard';
 import { useState } from 'react';
+import LikedImages from '../LikedImages/LikedImages';
 
 
 const AllAstroCards = ({astroData}) => {
@@ -48,9 +49,12 @@ const AllAstroCards = ({astroData}) => {
         )
     })
 
+
+
     return (
         <div className="all-astro-data">
             {allAstroData}
+            
         </div>
     );
 };

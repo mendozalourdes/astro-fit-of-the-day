@@ -9,6 +9,7 @@ import AllAstroCards  from '../AllAstroCards/AllAstroCards';
 import SingleAstroCard from '../SingleAstroCard/SingleAstroCard';
 import SingleAstroInfoCard from '../SingleAstroInfoCard/SingleAstroInfoCard';
 import loadingSpin from '../Images/loadingSpin.gif';
+import LikedImages from '../LikedImages/LikedImages';
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
   }
 
   if (astroData) {
+    console.log("astroData!", astroData)
 
   return (
     <main className="Astro-fit-of-the-day">
