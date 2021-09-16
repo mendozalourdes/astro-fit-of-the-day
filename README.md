@@ -1,70 +1,68 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# <p align="center"><i>Astro-Fit of the Day</i></p>
 
-## Available Scripts
 
-In the project directory, you can run:
+### Table of Contents
+- [Overview](#overview)
+- [Installation & Viewing](#installation-and-viewing)
+- [Functionality](#functionality)
+- [Future Additions](#future-additions)
+- [Tech Stack](#tech-stack)
+- [Contributors](#contributors)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<i>Astro-Fit of the Day</i>  is an application using NASA's [Astronomy Picture of the Day API](https://api.nasa.gov/).  The application was built using React. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation and Viewing 
 
-### `npm test`
+This application is deployed to Heroku. You may view the live application here.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To view this application on your local machine:
 
-### `npm run build`
+- Clone down this repository
+- Run `npm i` in your terminal
+- Run `npm start` in your terminal
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Functionality 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Welcome <br>
+- User arrives to dashboard after page loads. <br>
+![AstroLoadingView](https://user-images.githubusercontent.com/78240633/133691652-92382278-fe81-43fb-b736-faaf9d1b5c24.gif)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Like and Unlike Card
+- User may may like an astro card, and unlike it, which appears in a section above. <br>
+![Astro Like Unlike](https://user-images.githubusercontent.com/78240633/133691190-c0865110-b3f7-4398-b063-dabbb5071257.gif)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### More Info View
+- User may learn more about each astro card <br>
+![Astro More Info View](https://user-images.githubusercontent.com/78240633/133691550-ec5a17e0-97b9-48e3-8567-55f420be5f7f.gif)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Tech Stack
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<div align="center">  
+<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat-square" alt="React Badge">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat-square" alt="JavaScript Badge">
+<img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=flat-square" alt="CSS3 Badge">
+</div>  
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributors
+### Authors
+<table>
+         <tr>
+        <td> Lourdes Mendoza <a href="https://github.com/mendozalourdes">GitHub</td>
+      </tr>
+      </tr>
+<td><img src="https://avatars.githubusercontent.com/u/78240633?v=4" alt="Lourdes Mendoza photo"
+width="150" height="auto" /></td>
+    </tr>
+</table>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**************************************************************************
 
-### Code Splitting
+**[Back to top](#table-of-contents)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
