@@ -1,0 +1,9 @@
+.all-astro-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: .5%;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 2%;
+
+}

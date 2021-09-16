@@ -3,7 +3,7 @@ import { Route, Link, NavLink } from 'react-router-dom';
 import SingleAstroCard from '../SingleAstroCard/SingleAstroCard';
 import { useState } from 'react';
 import LikedImages from '../LikedImages/LikedImages';
-
+import './AllAstroCards.css'
 
 const AllAstroCards = ({astroData}) => {
 

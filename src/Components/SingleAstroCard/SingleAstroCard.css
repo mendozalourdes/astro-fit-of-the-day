@@ -1,4 +1,62 @@
-.each-astro-data {
-    border: 5px pink solid;
-    width: 50%;
+.each-astro-data-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    object-fit: fill;
+    transition: transform 450ms;
+	  will-change: transform;
+      border: 5px rgb(182, 176, 177) solid;
+      box-shadow: 7px -10px 20px 10px;
+      border-radius: 20px;
+
 }
+
+.astro-title {
+    font-size: 2em;
+    color: black;
+    text-decoration: inherit;
+}
+
+.button-section {
+    display: flex;
+    flex-direction: row;
+    align-items:center; 
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+
+.more-info-btn {
+    width:100%;
+    height:50px;
+    text-transform:uppercase;
+    color:black;
+    font-size:15px;
+    outline:none;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-bottom:10%;
+}
+
+.more-info-btn:hover, .more-info-btn:focus, button:hover, button:focus, .share-link:hover, .share-link:focus {
+    cursor: pointer;
+    border: 1px solid black;
+    
+  }
+
+  button {
+      width: 10%;
+      height: 50%;
+      background: none;
+      border-radius: 10px;
+  }
+
+  .share-link {
+      /* border: 3px rgb(182, 176, 177) solid; */
+      border-radius: 5px;
+      color: black;
+      padding: 2px;
+  }

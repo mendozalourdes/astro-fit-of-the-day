@@ -42,15 +42,15 @@ function App() {
       <>
       <Header />
       <section className='loading-container'>
-        <p>Thanks for your patience while we get your images from space! It's a long trek.</p>
-         <img className='loading' src={loadingSpin} />
+        <p className="loading-message">Thanks for your patience while we get your images from space! It's a long trek.</p>
+        <img className='loading' src={loadingSpin} />
       </section>
       </>
     )
   }
 
   if (astroData) {
-    console.log("astroData!", astroData)
+
 
   return (
     <main className="Astro-fit-of-the-day">
