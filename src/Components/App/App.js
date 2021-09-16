@@ -8,6 +8,8 @@ import Home from '../Home/Home';
 import AllAstroCards  from '../AllAstroCards/AllAstroCards';
 import SingleAstroCard from '../SingleAstroCard/SingleAstroCard';
 import SingleAstroInfoCard from '../SingleAstroInfoCard/SingleAstroInfoCard';
+import loadingSpin from '../Images/loadingSpin.gif';
+
 
 function App() {
 
@@ -33,11 +35,16 @@ function App() {
     getNASAData();
   }, [])
   
-  console.log("astroData", astroData)
 
   if (!astroData) {
     return (
-      <h1>I'm still loading!</h1>
+      <>
+      <Header />
+      <section className='loading-container'>
+        <p>Thanks for your patience while we get your images from space! It's a long trek.</p>
+         <img className='loading' src={loadingSpin} />
+      </section>
+      </>
     )
   }
 
@@ -51,11 +58,7 @@ function App() {
           <AllAstroCards astroData={astroData}/>
         }/>
         <Route exact path ="/astro-info/:id" render={({match}) => {
-          // console.log("match.params", match.params.id)
-          // console.log("astrooo", astroData[0])
           let astroMatch = astroData[match.params.id]
-          // console.log("astromatch??", astroMatch)
-
           return (
             <SingleAstroInfoCard astroData={astroData} id={match.params.id} astroMatch={astroMatch}/>
 
