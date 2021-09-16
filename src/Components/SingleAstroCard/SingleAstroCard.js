@@ -13,26 +13,8 @@ const SingleAstroCard = ({addToFavorites, removeFromFavorites, id, key, date, bu
     const [isLiked, updateLike] = useState(false);
 
 
-    // const handleLike = () => {
-    //     // let currentLikedImages = 
-    //     if (!isLiked) {
-    //       updateLike(true);
-    //       if (!currentLikedBands.includes(name))
-    //         props.updateLikedBands(
-    //           [...currentLikedBands, name]
-    //         );
-    //     } else {
-    //       updateLike(false);
-    //       if (currentLikedBands.includes(name))
-    //         props.updateLikedBands(
-    //           currentLikedBands
-    //           .filter(band => band !== name)
-    //           );
-    //     }
-    //   };
 
     const handleLike = (e) => {
-        console.log("event", e.target.id)
         if(!isLiked) {
             updateLike(true);
             addToFavorites(e.target.id)
@@ -43,15 +25,10 @@ const SingleAstroCard = ({addToFavorites, removeFromFavorites, id, key, date, bu
         }
     }
 
-    let buttonImg = buttonStyle ?
-                   <img id={id} key={key} src="https://img.icons8.com/office/30/000000/like--v1.png" alt="favorite button"/>
-                 : <img id={id} src="https://img.icons8.com/office/30/000000/delete-sign.png" alt="delete button"/>;
 
 
     return (
-        // <NavLink to={`/astro-info/${id}`}>
         <div className="each-astro-data" id={id}>
-            {/* <p>{url}</p> */}
             <a href={url}>Share This Image</a>
             <p className="astro-title"> {title}</p>
             <NavLink to={`/astro-info/${id}`}><button className="more-info-btn">More Info</button></NavLink>
@@ -64,10 +41,9 @@ const SingleAstroCard = ({addToFavorites, removeFromFavorites, id, key, date, bu
         <i className={title} id={id} aria-hidden="true">💔</i>
         </button>
         <p>You {isLiked ? "liked" : "have not liked"} this image. </p>
-            <img src={url} alt={title} className="astro-image"/>
+        <NavLink to={`/astro-info/${id}`}> <img src={url} alt={title} className="astro-image"/></NavLink>
 
         </div>
-        // </NavLink>
     );
 };
 
