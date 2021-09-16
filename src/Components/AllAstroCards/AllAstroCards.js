@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Link, NavLink } from 'react-router-dom';
 import SingleAstroCard from '../SingleAstroCard/SingleAstroCard';
 import { useState } from 'react';
-import LikedImages from '../LikedImages/LikedImages';
 import './AllAstroCards.css'
 
 const AllAstroCards = ({astroData}) => {
@@ -49,13 +48,27 @@ const AllAstroCards = ({astroData}) => {
         )
     })
 
+    const allFaves = favorites.map((data, i) => {
+        return (
+            <section>
+                <p>  • {data.title}</p> 
+            </section>
+            
+        )
+    })
+
 
 
     return (
-        <div className="all-astro-data">
-            {allAstroData}
-            
-        </div>
+        <section className="all-cards-section"> 
+       { favorites.length > 0 &&  <section className="favorites-names">
+                <p>These are your favorite astro-card names:</p>
+                     {(favorites.length > 0) && <p>{allFaves}</p>}
+            </section>}
+            <div className="all-astro-data">
+                {allAstroData}
+            </div>
+        </section>
     );
 };
 

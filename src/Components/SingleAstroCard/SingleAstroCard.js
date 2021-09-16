@@ -13,8 +13,6 @@ const SingleAstroCard = ({addToFavorites, removeFromFavorites, id, key, date, bu
 
     const [isLiked, updateLike] = useState(false);
 
-
-
     const handleLike = (e) => {
         if(!isLiked) {
             updateLike(true);
