@@ -30,7 +30,7 @@ const SingleAstroCard = ({addToFavorites, removeFromFavorites, id, key, date, bu
     return (
         // <div className="astro-container">
             <div className="each-astro-data-card" id={id}>
-                <p className="astro-title"> {title}</p>
+                <NavLink to={`/astro-info/${id}`}><p className="astro-title"> {title}</p></NavLink>
                 <div className="button-section">
                 <NavLink to={`/astro-info/${id}`}><button className="more-info-btn">More Info</button></NavLink>
             

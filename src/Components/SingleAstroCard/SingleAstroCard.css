@@ -1,6 +1,5 @@
 .each-astro-data-card {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     width: 90%;
@@ -9,10 +8,16 @@
     object-fit: fill;
     transition: transform 450ms;
 	  will-change: transform;
-      border: 5px pink solid;
+      border: 5px rgb(182, 176, 177) solid;
       box-shadow: 7px -10px 20px 10px;
       border-radius: 20px;
 
+}
+
+.astro-title {
+    font-size: 2em;
+    color: black;
+    text-decoration: inherit;
 }
 
 .button-section {
@@ -23,31 +28,13 @@
     width: 100%;
 }
 
-/* .astro-image {
-    object-fit:initial;
-} */
-
-.astro-container {
-    display: flex;
-    flex-direction: column;
-    /* box-shadow: 7px 2px 20px 0px rgba(52,21,85); */
-    
-}
-
-/* .astro-container :hover, .astro-container :focus {
-	transition: transform 125ms;
-	transform: translateY(-30px);
-}
- */
 
 
 .more-info-btn {
     width:100%;
     height:50px;
-    /* background:hsla(303, 86%, 40%, 0.658); */
     text-transform:uppercase;
     color:black;
-    /* border:none; */
     font-size:15px;
     outline:none;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -68,7 +55,7 @@
   }
 
   .share-link {
-      border: 3px solid purple;
+      /* border: 3px rgb(182, 176, 177) solid; */
       border-radius: 5px;
       color: black;
       padding: 2px;
