@@ -1,8 +1,8 @@
 const baseURL = 'https://api.nasa.gov/planetary/apod?api_key=i7VC0jDS5LOoTBqSVLELbepXUTJqY77xUTn0fg9O'
-const get25Images = '&count=25'
+const get30Images = '&count=30'
 
 export const fetchNASAData = async () => {
-    let url = `${baseURL}${get25Images}`;
+    let url = `${baseURL}${get30Images}`;
     let response = await fetch(url);
     let data = await checkForErrors(response);
     return data;
