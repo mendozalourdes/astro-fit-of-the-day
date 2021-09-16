@@ -5,12 +5,11 @@
     width: 90%;
     height: auto;
     overflow: hidden;
-    object-fit: fill;
-    transition: transform 450ms;
-	  will-change: transform;
-      border: 5px rgb(182, 176, 177) solid;
-      box-shadow: 7px -10px 20px 10px;
-      border-radius: 20px;
+    text-align: center;
+    margin-bottom: 5%;
+    border: 5px rgb(182, 176, 177) solid;
+    box-shadow: 7px -10px 20px 10px;
+    border-radius: 20px;
 
 }
 
@@ -59,4 +58,15 @@
       border-radius: 5px;
       color: black;
       padding: 2px;
+  }
+
+  .astro-card-image-container-group {
+    width: 95%;
+    overflow: hidden;
+    object-fit: fill;
+}
+
+.astro-image {
+    border-radius: 15px;
+    width: 100%;
   }

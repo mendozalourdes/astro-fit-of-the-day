@@ -43,8 +43,10 @@ const SingleAstroCard = ({addToFavorites, removeFromFavorites, id, key, date, bu
             </button>
 
                 </div>
-            <p>You {isLiked ? "liked" : "have not liked"} this image. </p>
-            <NavLink to={`/astro-info/${id}`}> <img src={url} alt={title} className="astro-image"/></NavLink>
+            <p>{isLiked ? " You ❤️ this astro-card. " : " You have not liked this astro-card."} </p>
+            <div className="astro-card-image-container-group">
+                 <NavLink to={`/astro-info/${id}`}> <img src={url} alt={title} className="astro-image"/></NavLink>
+            </div>
 
             <a className="share-link" href={url}>Share This Image</a>
             </div>
