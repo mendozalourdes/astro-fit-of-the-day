@@ -1,17 +1,19 @@
 import React from 'react';
 import {Link, NavLink } from 'react-router-dom';
+import './SingleAstroInfoCard.css'
 
 const SingleAstroInfoCard = ({astroData, id, astroMatch}) => {
-    console.log("singleInfoAll", astroData)
-    console.log("astroMatch", astroMatch)
-    console.log("id", id)
     return (
         <div className="single-astro-info-section">
-            <p>
+            <p className="astro-match-title">
                 {astroMatch.title}
             </p>
-                <img src={astroMatch.url} alt={astroMatch.title} className="astro-image"/>
-                <p>{astroMatch.explanation}</p>
+            <div className="astro-card-image-container">
+                <img src={astroMatch.url} alt={astroMatch.title} className="astro-image-info-page"/>
+            </div>
+            <div className="explanation-container">
+                <p className="astro-match-explanation">{astroMatch.explanation}</p>
+            </div>
         </div>
     );
 };
