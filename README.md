@@ -12,17 +12,23 @@
 
 ## Overview
 
-<i>Astro-Fit of the Day</i>  is an application using NASA's [Astronomy Picture of the Day API](https://api.nasa.gov/).  The application was built using React. 
+<i>Astro-Fit of the Day</i>  is an application using NASA's [Astronomy Picture of the Day API](https://api.nasa.gov/) to render cards created from the data in the API. There is a home page to view all of the cards pulled from the API, with the option to like and unlike a card. Users can also view more information about the page after clicking on a card, which leads them to further information pulled from the API.  The application was built using React. 
 
 ## Installation and Viewing 
 
-This application is deployed to Heroku. You may view the live application here.
+This application is deployed to Heroku. You may view the live application [here](https://astro-fit-of-the-day.herokuapp.com/).
 
 To view this application on your local machine:
 
 - Clone down this repository
 - Run `npm i` in your terminal
 - Run `npm start` in your terminal
+
+## Planning
+A Miro-board was used to create wireframes when planning the application. An automated GitHub project board was also used to effectively plan the project. 
+
+<img width="954" alt="astro-fit miro board" src="https://user-images.githubusercontent.com/78240633/133693362-36ca4dec-ee0d-40f6-b3c2-1602ac0fda72.png">
+
 
 ## Functionality 
 
