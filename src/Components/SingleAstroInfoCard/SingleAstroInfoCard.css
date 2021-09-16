@@ -21,11 +21,9 @@
     overflow: hidden;
     text-align: center;
     object-fit: cover;
-    transition: transform 450ms;
-	  will-change: transform;
-      border: 5px rgb(182, 176, 177) solid;
-      box-shadow: 7px -10px 20px 10px;
-      border-radius: 20px;
+    border: 5px rgb(182, 176, 177) solid;
+    box-shadow: 7px -10px 20px 10px;
+    border-radius: 20px;
 
 }
 

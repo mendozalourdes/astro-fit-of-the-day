@@ -4,12 +4,9 @@ import { useEffect, useState } from 'react';
 import {Route, Switch } from 'react-router-dom';
 import { fetchNASAData } from '../../Utils/apiCalls'
 import Header from '../Header/Header';
-import Home from '../Home/Home';
 import AllAstroCards  from '../AllAstroCards/AllAstroCards';
-import SingleAstroCard from '../SingleAstroCard/SingleAstroCard';
 import SingleAstroInfoCard from '../SingleAstroInfoCard/SingleAstroInfoCard';
 import loadingSpin from '../Images/loadingSpin.gif';
-import LikedImages from '../LikedImages/LikedImages';
 
 
 function App() {
@@ -56,6 +53,7 @@ function App() {
     <main className="Astro-fit-of-the-day">
       <Header/>
       <Switch>
+ 
         <Route exact path ="/" render={() =>
           <AllAstroCards astroData={astroData}/>
         }/>
