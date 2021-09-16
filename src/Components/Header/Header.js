@@ -5,11 +5,11 @@ import './Header.css';
 const Header = () => {
     return (
         <nav className="header">
-            <div className="header-container">
+            <section className="header-container">
             <Link to='/'> 
             <p className="app-title">Astro-Fit of the Day</p>
             </Link>
-            </div>
+            </section>
             
         </nav>
     );

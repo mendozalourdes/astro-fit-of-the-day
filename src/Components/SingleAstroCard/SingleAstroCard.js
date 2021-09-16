@@ -2,6 +2,7 @@ import React from 'react';
 import { Router, Link, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import './SingleAstroCard.css'
+import { formatDate } from '../../Utils/utils'
 
 const SingleAstroCard = ({addToFavorites, removeFromFavorites, id, key, date, buttonStyle, explanation, hdurl, title, url}) => {
   
@@ -28,29 +29,24 @@ const SingleAstroCard = ({addToFavorites, removeFromFavorites, id, key, date, bu
 
 
     return (
-        // <div className="astro-container">
-            <div className="each-astro-data-card" id={id}>
+            <section className="each-astro-data-card" id={id}>
                 <NavLink to={`/astro-info/${id}`}><p className="astro-title"> {title}</p></NavLink>
-                <div className="button-section">
-                <NavLink to={`/astro-info/${id}`}><button className="more-info-btn">More Info</button></NavLink>
-            
-                
-                <button id={id} className={title} disabled={isLiked} onClick={e => {handleLike(e)}}>
-                <i className="like-image" id={id} aria-hidden="true"> ❤️</i>
-            </button>
-            <button id={id} className={title} disabled={!isLiked} onClick={e => {handleLike(e)}}>
-            <i className={title} id={id} aria-hidden="true">💔</i>
-            </button>
-
-                </div>
+                <p className="astro-date">Date of Capture: {formatDate(date)}</p>
+                <section className="button-section">
+                    <NavLink to={`/astro-info/${id}`}><button className="more-info-btn">More Info</button></NavLink>
+                    <button id={id} className={title} disabled={isLiked} onClick={e => {handleLike(e)}}>
+                        <i className="like-image" id={id} aria-hidden="true"> ❤️</i>
+                    </button>
+                    <button id={id} className={title} disabled={!isLiked} onClick={e => {handleLike(e)}}>
+                        <i className={title} id={id} aria-hidden="true">💔</i>
+                    </button>
+                </section>
             <p>{isLiked ? " You ❤️ this astro-card. " : " You have not liked this astro-card."} </p>
             <div className="astro-card-image-container-group">
                  <NavLink to={`/astro-info/${id}`}> <img src={url} alt={title} className="astro-image"/></NavLink>
             </div>
-
-            <a className="share-link" href={url}>Share This Image</a>
-            </div>
-        // </div>
+                <a className="share-link" href={url}>Share This Image</a>
+            </section>
     );
 };
 
