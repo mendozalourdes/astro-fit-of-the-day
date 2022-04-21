@@ -1,15 +1,26 @@
 import React from 'react';
 import { Router, Link, NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './SingleAstroCard.css'
 import { formatDate } from '../../Utils/utils'
 
 const SingleAstroCard = ({addToFavorites, removeFromFavorites, id, key, date, buttonStyle, explanation, hdurl, title, url}) => {
   
+    const useLocalStorage = (storageKey, fallbackState) => {
+        const [value, setValue] = useState(
+          JSON.parse(localStorage.getItem(storageKey)) ?? fallbackState
+        );
+      
+        useEffect(() => {
+          localStorage.setItem(storageKey, JSON.stringify(value));
+        }, [value, storageKey]);
+      
+        return [value, setValue];
+      };
     
     const [isDisabled, setIsDisabled] = useState(false);
     const [canFavorite, setCanFavorite] = useState(true);
-    const [favorites, setFavorites] = useState([])
+    const [favorites, setFavorites] = useLocalStorage('favorites', []);
 
     const [isLiked, updateLike] = useState(false);
 
@@ -22,8 +33,8 @@ const SingleAstroCard = ({addToFavorites, removeFromFavorites, id, key, date, bu
             removeFromFavorites(e.target.classList)
 
         }
-    }
 
+    }
 
 
     return (
