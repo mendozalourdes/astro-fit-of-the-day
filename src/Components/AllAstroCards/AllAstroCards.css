@@ -20,3 +20,15 @@
     flex-direction: column;
     align-items: center;
 }
+
+.favorite-links {
+    color: greenyellow;
+    text-decoration: underline;
+    font-size: 1.25em;
+    text-align: left;
+    color: black;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-weight: bolder;
+    padding: 3%;
+    margin-top: 5%;
+}
